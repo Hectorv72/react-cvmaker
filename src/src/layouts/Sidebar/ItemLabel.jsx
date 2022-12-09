@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SidebarItemLabel = ({ label }) => {
+const ItemLabel = ({ label }) => {
   return (
     <li className="sidebar--item">
       <span className="sidebar--label">{label}</span>
@@ -8,4 +8,4 @@ const SidebarItemLabel = ({ label }) => {
   )
 }
 
-export default SidebarItemLabel
+export default ItemLabel

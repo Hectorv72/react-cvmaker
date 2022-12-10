@@ -254,9 +254,9 @@ hr {
   padding-bottom: 0;
 }
 
-/*.section:last-child .section--item:last-child .section--heading-group {
-            padding-bottom: 0;
-        }*/
+.section:last-child .section--item:last-child .section--heading-group {
+  padding-bottom: 0;
+}
 
 .section--time-line-dot {
   position: absolute;
@@ -476,7 +476,7 @@ hr {
   font-style: normal;
   padding-right: 2px;
   z-index: 1;
-  /* background: #607d8b; */
+  background: #607d8b;
 }
 
 .sidebar--title span:last-child {
@@ -661,4 +661,6 @@ html[lang="tr"] .sidebar--item {
   line-height: 18px;
 }
 
-/*strong { white-space: nowrap; }*/
+strong {
+  white-space: nowrap;
+}

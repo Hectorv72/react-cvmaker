@@ -18,7 +18,7 @@ const SectionTimeLine = ({ icon, title, list = [] }) => {
       <ol className="section--list">
         {
           list.map(
-            ({ date, title, subtitle, content }) => <ItemTimeLine date={date} title={title} subtitle={subtitle} content={content} />
+            ({ date, title, subtitle, content }, index) => <ItemTimeLine key={'item-timeline' + index} date={date} title={title} subtitle={subtitle} content={content} />
           )
         }
       </ol>

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import fragmentList from '../../helpers/fragmentList'
 
 const SectionSkills = ({ icon, title, list = [] }) => {
-  console.log(list)
   return (
     <div className="section">
       <div className="section--title">
@@ -19,15 +18,17 @@ const SectionSkills = ({ icon, title, list = [] }) => {
       <ol className="section--list skills">
         {
           (fragmentList([...list], 2)).map(
-            (item, index) =>
+            (items, index) =>
               <li key={'item-skills-' + index} className="section--item skills">
                 <div style={{ flexDirection: 'row' }}>
-                  <div className="skills--label">
-                    <h3>{item[0]}</h3>
-                  </div>
-                  <div className="skills--label">
-                    <h3>{item[1]}</h3>
-                  </div>
+                  {
+                    items.map(
+                      (item, i) =>
+                        <div key={'item-skill-' + i} className="skills--label">
+                          <h3>{item}</h3>
+                        </div>
+                    )
+                  }
                 </div>
               </li>
           )

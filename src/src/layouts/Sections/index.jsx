@@ -20,13 +20,18 @@ const Sections = () => {
       date: '2013 - 2020',
       title: "Programming Technician",
       subtitle: "Provincial School of Technical Education N°7, Formosa city",
-    }
+    },
+    {
+      date: '2021 - 2022',
+      title: "Advanced Technician in Multiplatform Software Development",
+      subtitle: "Polytechnic Institute of Formosa (IPF), Formosa city",
+    },
   ]
 
   const SkillsList = [
     'Linux', 'Git/Github', 'Javscript', 'Nodejs',
     'ReactJs', 'Typescript', 'Vue', 'ExpressJs',
-    'Docker', 'MongoDB', 'SocketIO', 'Python', 'Django',
+    'Docker', 'Scrum', 'MongoDB', 'SocketIO', 'Python', 'Django',
     'Tailwind', 'Bootstrap', 'MaterialUI',
     'Php', 'Laravel', 'Mysql', 'Postgresql', 'Java', 'C++'
   ]

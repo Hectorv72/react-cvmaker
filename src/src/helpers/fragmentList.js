@@ -3,6 +3,5 @@ export default (list, num) => {
   while (list.length > 0) {
     newList.push(list.splice(0, num))
   }
-  console.log(newList)
   return newList
 }

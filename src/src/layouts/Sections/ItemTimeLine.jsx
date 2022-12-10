@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemSection = ({ date, title, subtitle, content }) => {
+const ItemTimeLine = ({ date, title, subtitle, content }) => {
   return (
     <li className="section--item">
       <div className="section--time-line">
@@ -30,4 +30,4 @@ const ItemSection = ({ date, title, subtitle, content }) => {
   )
 }
 
-export default ItemSection
+export default ItemTimeLine

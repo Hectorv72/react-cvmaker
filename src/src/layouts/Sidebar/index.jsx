@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddressIcon, EmailIcon, GithubIcon, LinkedinIcon, PhoneIcon, UbicationIcon, UserIcon } from '../../data/SidebarIcons'
+import { EmailIcon, GithubIcon, LinkedinIcon, PhoneIcon, UbicationIcon } from '../../data/SidebarIcons'
 import ItemLabel from './ItemLabel'
 import ItemPersonal from './ItemPersonal'
 import SidebarList from './SidebarList'

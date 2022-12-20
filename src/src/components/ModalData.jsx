@@ -3,6 +3,7 @@ import { Modal, Tabs, Tab, Button } from 'react-bootstrap'
 import ContentContext from '../context/ContentContext'
 import TabsBody from '../layouts/TabsBody'
 import TabsSidebar from '../layouts/TabsSidebar'
+import ModalFormGeneral from './ModalFormGeneral'
 
 const ModalData = () => {
   const { show, setShow, handleSaveUpdates, handleCancelUpdates } = useContext(ContentContext)
@@ -20,7 +21,12 @@ const ModalData = () => {
   return (
     <Modal show={show} onHide={() => setShow(false)}>
       <Modal.Body className='p-0'>
-        <Tabs defaultActiveKey="sidebar">
+        <Tabs defaultActiveKey="general">
+          <Tab eventKey="general" title="General">
+            <div className='px-4'>
+              <ModalFormGeneral />
+            </div>
+          </Tab>
           <Tab eventKey="sidebar" title="Sidebar">
             <div className='px-4'>
               <TabsSidebar />

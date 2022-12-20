@@ -6,7 +6,7 @@ import ItemPersonal from '../layouts/Sidebar/ItemPersonal'
 import SidebarList from '../layouts/Sidebar/SidebarList'
 
 const Sidebar = () => {
-  const { content, setShow } = useContext(ContentContext)
+  const { content, language, setShow } = useContext(ContentContext)
   const { sidebar } = content
   const { personal, others } = sidebar
   return (
@@ -16,10 +16,10 @@ const Sidebar = () => {
         <div className='me-3 pt-4 d-print-none'>
           <button className='w-100 btn btn-outline-light' onClick={() => setShow(true)}>Modificar</button>
         </div>
-        <SidebarList title={'Información personal'}>
-          {personal?.from && <ItemPersonal icon={UbicationIcon} label={'Dirección'} description={personal.from} />}
+        <SidebarList title={language.personal_information}>
+          {personal?.from && <ItemPersonal icon={UbicationIcon} label={language.from} description={personal.from} />}
           {personal?.email && <ItemPersonal icon={EmailIcon} label={'Email'} description={personal.email} />}
-          {personal?.phone && <ItemPersonal icon={PhoneIcon} label={'Teléfono'} description={personal.phone} />}
+          {personal?.phone && <ItemPersonal icon={PhoneIcon} label={language.phone} description={personal.phone} />}
           {personal?.github && <ItemPersonal icon={GithubIcon} label={'Github'} description={personal.github} />}
           {personal?.linkedin && <ItemPersonal icon={LinkedinIcon} label={'Linkedin'} description={personal.linkedin} />}
         </SidebarList>

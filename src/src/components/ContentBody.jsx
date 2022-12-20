@@ -7,7 +7,8 @@ import SectionSummary from '../layouts/Sections/SectionSummary'
 import SectionTimeLine from '../layouts/Sections/SectionTimeLine'
 
 const ContentBody = () => {
-  const { content } = useContext(ContentContext)
+  const { content, language } = useContext(ContentContext)
+  const { work_experience, titles_and_certifications, knowledges } = language
   const { body } = content
   return (
     <section className="sections">
@@ -17,9 +18,9 @@ const ContentBody = () => {
         subtitle={body.summary.subtitle}
         description={body.summary.description}
       />
-      <SectionTimeLine icon={WorkIcon} title="experiencia laboral" list={body?.works || []} />
-      <SectionTimeLine icon={StudiesIcon} title="títulos y certificaciones" list={body?.certifications || []} />
-      <SectionSkills icon={KnowledgesIcon} title="conocimientos" list={body?.knowledges || []} />
+      <SectionTimeLine icon={WorkIcon} title={work_experience} list={body?.works || []} />
+      <SectionTimeLine icon={StudiesIcon} title={titles_and_certifications} list={body?.certifications || []} />
+      <SectionSkills icon={KnowledgesIcon} title={knowledges} list={body?.knowledges || []} />
     </section>
   )
 }

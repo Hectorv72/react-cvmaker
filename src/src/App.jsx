@@ -7,16 +7,25 @@ import ContentContext from './context/ContentContext'
 import ContentBody from './components/ContentBody'
 import Sidebar from './components/Sidebar'
 import ModalData from './components/ModalData'
+import spanish from './language/spanish.json'
+import english from './language/english.json'
+
+const languages = { english, spanish }
 
 function App() {
   const init = JSON.stringify(CvDataInit)
   const [content, setContent] = useState(JSON.parse(init))
   const [update, setUpdate] = useState(JSON.parse(init))
   const [show, setShow] = useState(false)
+  const [language, setLanguage] = useState(english)
 
   const handleCancelUpdates = () => {
     const contentStr = JSON.stringify(content)
     setUpdate(JSON.parse(contentStr))
+  }
+
+  const handleChangeLanguage = (language) => {
+    setLanguage(languages[language])
   }
 
   const handleSaveUpdates = () => {
@@ -31,6 +40,8 @@ function App() {
     setUpdate,
     handleSaveUpdates,
     handleCancelUpdates,
+    language,
+    changeLanguage: handleChangeLanguage,
     show,
     setShow
   }

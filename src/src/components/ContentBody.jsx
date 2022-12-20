@@ -17,9 +17,9 @@ const ContentBody = () => {
         subtitle={body.summary.subtitle}
         description={body.summary.description}
       />
-      <SectionTimeLine icon={WorkIcon} title="work experience" list={body?.works || []} />
-      <SectionTimeLine icon={StudiesIcon} title="studies and certifications" list={body?.certifications || []} />
-      <SectionSkills icon={KnowledgesIcon} title="knowledges" list={body?.knowledges || []} />
+      <SectionTimeLine icon={WorkIcon} title="experiencia laboral" list={body?.works || []} />
+      <SectionTimeLine icon={StudiesIcon} title="títulos y certificaciones" list={body?.certifications || []} />
+      <SectionSkills icon={KnowledgesIcon} title="conocimientos" list={body?.knowledges || []} />
     </section>
   )
 }

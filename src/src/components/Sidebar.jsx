@@ -16,10 +16,10 @@ const Sidebar = () => {
         <div className='me-3 pt-4 d-print-none'>
           <button className='w-100 btn btn-outline-light' onClick={() => setShow(true)}>Modificar</button>
         </div>
-        <SidebarList title={'personal information'}>
-          {personal?.from && <ItemPersonal icon={UbicationIcon} label={'From'} description={personal.from} />}
+        <SidebarList title={'Información personal'}>
+          {personal?.from && <ItemPersonal icon={UbicationIcon} label={'Dirección'} description={personal.from} />}
           {personal?.email && <ItemPersonal icon={EmailIcon} label={'Email'} description={personal.email} />}
-          {personal?.phone && <ItemPersonal icon={PhoneIcon} label={'Phone'} description={personal.phone} />}
+          {personal?.phone && <ItemPersonal icon={PhoneIcon} label={'Teléfono'} description={personal.phone} />}
           {personal?.github && <ItemPersonal icon={GithubIcon} label={'Github'} description={personal.github} />}
           {personal?.linkedin && <ItemPersonal icon={LinkedinIcon} label={'Linkedin'} description={personal.linkedin} />}
         </SidebarList>

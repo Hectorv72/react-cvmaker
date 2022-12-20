@@ -8,34 +8,34 @@ export default {
       linkedin: 'www.linkedin.com/in/hectorv72'
     },
     others: [
-      { title: 'Languages', items: ['English - Conversational'] }
+      { title: 'Idiomas', items: ['Inglés - Básico'] }
     ]
   },
   body: {
     name: 'Hector Daniel Valdez',
     summary: {
-      title: 'Backend Developer - nodejs',
-      subtitle: 'More than 5 years of experience in software development',
-      description: 'Self-thaught. Very interested in learning new tecnologies. Challenging my knowledge to continue improving and developing as a professional.'
+      title: 'Backend Developer',
+      subtitle: 'Más de 5 años de experiencia desarrollando software',
+      description: 'Autodidacta y responsable, tengo mucho interés en aprender nuevas tecnologías y desafiar mis conocimientos para seguir mejorando y desarrollándome como profesional.Me gusta socializar, ayudar y trabajar en equipo.'
     },
     works: [
       {
-        date: 'may 2022 - current',
-        title: 'Fullstack Developer - Government House of the Province of Formosa',
-        subtitle: 'Formosa city',
-        content: 'Development of a system for geo-referenced reports of the GGP of the province.'
+        date: 'Mayo 2022 - Actual',
+        title: 'Fullstack Developer - Casa de Gobierno de la Provincia de Formosa',
+        subtitle: 'Formosa Capital',
+        content: 'Desarrollo de un sistema para reportes georreferenciados de los datos del PGB de la provincia de Formosa.'
       }
     ],
     certifications: [
       {
-        date: '2013 - 2020',
-        title: 'Programming Technician',
-        subtitle: 'Provincial School of Technical Education N°7, Formosa city'
+        date: '2014 - 2020',
+        title: 'Técnico en Programación',
+        subtitle: 'Escuela Provincial de Educación Técnica N°7, Formosa Capital'
       },
       {
         date: '2021 - 2022',
-        title: 'Advanced Technician in Multiplatform Software Development',
-        subtitle: 'Polytechnic Institute of Formosa (IPF), Formosa city'
+        title: 'Técnico Superior en Desarrollo de Software Multiplataforma',
+        subtitle: 'Instituto Politécnico Formosa, Formosa Capital'
       }
     ],
     knowledges: [
@@ -47,21 +47,16 @@ export default {
       'Typescript',
       'Vue',
       'ExpressJs',
-      'Docker',
-      'Scrum',
-      'MongoDB',
-      'SocketIO',
       'Python',
       'Django',
-      'Tailwind',
-      'Bootstrap',
-      'MaterialUI',
       'Php',
       'Laravel',
-      'Mysql',
-      'Postgresql',
+      'MongoDB',
+      'SocketIO',
+      'SQL',
       'Java',
-      'C++'
+      'Docker',
+      'Scrum',
     ]
   }
 }

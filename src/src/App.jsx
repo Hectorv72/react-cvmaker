@@ -14,6 +14,11 @@ function App() {
   const [update, setUpdate] = useState(JSON.parse(init))
   const [show, setShow] = useState(false)
 
+  const handleCancelUpdates = () => {
+    const contentStr = JSON.stringify(content)
+    setUpdate(JSON.parse(contentStr))
+  }
+
   const handleSaveUpdates = () => {
     const updateStr = JSON.stringify(update)
     setContent(JSON.parse(updateStr))
@@ -25,6 +30,7 @@ function App() {
     update,
     setUpdate,
     handleSaveUpdates,
+    handleCancelUpdates,
     show,
     setShow
   }

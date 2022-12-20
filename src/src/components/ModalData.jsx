@@ -1,10 +1,16 @@
 import React, { useContext } from 'react'
 import { Modal, Tabs, Tab, Button } from 'react-bootstrap'
 import ContentContext from '../context/ContentContext'
-import ModalFormSummary from './ModalFormSummary'
+import TabsBody from '../layouts/TabsBody'
+import TabsSidebar from '../layouts/TabsSidebar'
 
 const ModalData = () => {
-  const { show, setShow, handleSaveUpdates, update } = useContext(ContentContext)
+  const { show, setShow, handleSaveUpdates, handleCancelUpdates } = useContext(ContentContext)
+
+  const handleClickCancel = () => {
+    handleCancelUpdates()
+    setShow(false)
+  }
 
   const handleClickSave = () => {
     handleSaveUpdates()
@@ -13,16 +19,22 @@ const ModalData = () => {
 
   return (
     <Modal show={show} onHide={() => setShow(false)}>
-      {/* <Modal.Header closeButton></Modal.Header> */}
       <Modal.Body className='p-0'>
-        <Tabs defaultActiveKey="summary">
-          <Tab eventKey="summary" title="Summary">
-            <ModalFormSummary />
+        <Tabs defaultActiveKey="sidebar">
+          <Tab eventKey="sidebar" title="Sidebar">
+            <div className='px-4'>
+              <TabsSidebar />
+            </div>
+          </Tab>
+          <Tab eventKey="body" title="Body">
+            <div className='px-4'>
+              <TabsBody />
+            </div>
           </Tab>
         </Tabs>
       </Modal.Body>
       <Modal.Footer className='d-flex justify-content-center'>
-        <Button variant='danger' onClick={() => setShow(false)}>Salir</Button>
+        <Button variant='danger' onClick={handleClickCancel}>Cancelar</Button>
         <Button variant='primary' onClick={handleClickSave}>Guardar</Button>
       </Modal.Footer>
     </Modal>

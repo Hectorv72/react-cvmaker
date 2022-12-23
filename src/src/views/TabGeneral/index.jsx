@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Col, Form, FormLabel, Row } from 'react-bootstrap'
-import ContentContext from '../context/ContentContext'
+import ContentContext from '../../context/ContentContext'
 
-const ModalFormBasic = () => {
+const TabGeneral = () => {
   const { update, setUpdate, changeLanguage, language } = useContext(ContentContext)
   const { languageLabel } = language
   const { body } = update
@@ -38,4 +38,4 @@ const ModalFormBasic = () => {
   )
 }
 
-export default ModalFormBasic
+export default TabGeneral

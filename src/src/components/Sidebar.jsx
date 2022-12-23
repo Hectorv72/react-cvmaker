@@ -14,6 +14,7 @@ const Sidebar = () => {
       <div className="sidebar--bg"></div>
       <aside className="sidebar">
         <div className='me-3 pt-4 d-print-none'>
+          <label className='my-2 w-100 text-center h6'>Print: Ctrl + P</label>
           <button className='w-100 btn btn-outline-light' onClick={() => setShow(true)}>Modificar</button>
         </div>
         <SidebarList title={language.personal_information}>

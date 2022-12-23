@@ -1,16 +1,15 @@
 import React from 'react'
 import { Tabs, Tab } from 'react-bootstrap'
-import ModalFormSummary from '../components/ModalFormSummary'
+import Summary from './tabs/Summary'
 
-
-const TabsBody = () => {
+const TabBody = () => {
   return (
     <Tabs defaultActiveKey="summary">
       <Tab eventKey="summary" title="Summary">
-        <ModalFormSummary />
+        <Summary />
       </Tab>
     </Tabs>
   )
 }
 
-export default TabsBody
+export default TabBody

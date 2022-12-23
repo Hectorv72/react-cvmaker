@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Col, Form, FormLabel, Row } from 'react-bootstrap'
-import ContentContext from '../context/ContentContext'
+import ContentContext from '../../../context/ContentContext'
 
-const ModalFormSummary = () => {
+const Summary = () => {
   const { update, setUpdate } = useContext(ContentContext)
   const { body } = update
 
@@ -36,4 +36,4 @@ const ModalFormSummary = () => {
   )
 }
 
-export default ModalFormSummary
+export default Summary

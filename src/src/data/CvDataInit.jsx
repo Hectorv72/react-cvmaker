@@ -1,4 +1,5 @@
 export default {
+  language: 'spanish',
   sidebar: {
     personal: {
       from: 'Argentina Formosa Formosa',

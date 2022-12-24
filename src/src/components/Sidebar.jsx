@@ -15,7 +15,7 @@ const Sidebar = () => {
       <aside className="sidebar">
         <div className='me-3 pt-4 d-print-none'>
           <label className='my-2 w-100 text-center h6'>Print: Ctrl + P</label>
-          <button className='w-100 btn btn-outline-light' onClick={() => setShow(true)}>Modificar</button>
+          <button className='w-100 btn btn-outline-light' onClick={() => setShow(true)}>Modify</button>
         </div>
         <SidebarList title={language.personal_information}>
           {personal?.from && <ItemPersonal icon={UbicationIcon} label={language.from} description={personal.from} />}
@@ -38,6 +38,9 @@ const Sidebar = () => {
               </SidebarList>
           )
         }
+        <div className='pt-5 d-print-none'>
+          <a href="https://github.com/Hectorv72/react-cvmaker" target="_blank" className='my-2 w-100 text-center link link-light text-decoration-none'><strong>Support the project ♥️</strong></a>
+        </div>
       </aside>
     </>
   )

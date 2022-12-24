@@ -40,8 +40,8 @@ const ModalData = () => {
         </Tabs>
       </Modal.Body>
       <Modal.Footer className='d-flex justify-content-center'>
-        <Button variant='danger' onClick={handleClickCancel}>Cancelar</Button>
-        <Button variant='primary' onClick={handleClickSave}>Guardar</Button>
+        <Button variant='outline-danger' onClick={handleClickCancel}>Cancel</Button>
+        <Button variant='outline-success' onClick={handleClickSave}>Save</Button>
       </Modal.Footer>
     </Modal>
   )

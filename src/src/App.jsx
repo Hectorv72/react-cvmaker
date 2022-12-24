@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import 'bootstrap'
 import './css/style.css'
 import './css/fonts.css'
-import CvDataInit from './data/CvDataInit'
+import InitCvData from './data/InitCvData'
 import ContentContext from './context/ContentContext'
 import ContentBody from './components/ContentBody'
 import Sidebar from './components/Sidebar'
@@ -13,7 +13,7 @@ import english from './language/english.json'
 const languages = { english, spanish }
 
 function App() {
-  const init = JSON.stringify(CvDataInit)
+  const init = JSON.stringify(InitCvData)
   const [content, setContent] = useState(JSON.parse(init))
   const [update, setUpdate] = useState(JSON.parse(init))
   const [show, setShow] = useState(false)
@@ -41,10 +41,14 @@ function App() {
     handleSaveUpdates,
     handleCancelUpdates,
     language,
-    changeLanguage: handleChangeLanguage,
+    // changeLanguage: handleChangeLanguage,
     show,
     setShow
   }
+
+  useEffect(() => {
+    handleChangeLanguage(content.language)
+  }, [content.language])
 
   return (
     <div>

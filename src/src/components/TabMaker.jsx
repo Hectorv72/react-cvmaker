@@ -48,7 +48,7 @@ const TabMaker = ({ tabs: initTabs = [], componentMaker, header = true, tabLabel
           }
           <Component {...props} index={index} />
           {
-            !persistent && <Button variant='outline-danger' className='text-center w-100' onClick={() => handleDeleteTab(index)}>Eliminar</Button>
+            !persistent && <Button variant='outline-danger' className='text-center w-100' onClick={() => handleDeleteTab(index)}>Remove</Button>
           }
         </div>
       </Tab>

@@ -37,7 +37,7 @@ const ContentItems = ({ items: initItems = [], index }) => {
           <FormLabel id='form-newitem-items'>Items</FormLabel>
           <Form className='d-flex flex-row' onSubmit={handleAddItem}>
             <Form.Control value={input || ''} id='form-newitem-title' onChange={({ target }) => setInput(target.value)} />
-            <Button className='ms-2' type='submit'>Agregar</Button>
+            <Button className='ms-2' type='submit'>Add</Button>
           </Form>
         </Col>
         <Col xs={12}>

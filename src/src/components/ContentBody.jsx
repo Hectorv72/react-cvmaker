@@ -18,9 +18,18 @@ const ContentBody = () => {
         subtitle={body.summary.subtitle}
         description={body.summary.description}
       />
-      <SectionTimeLine icon={WorkIcon} title={work_experience} list={body?.works || []} />
-      <SectionTimeLine icon={StudiesIcon} title={titles_and_certifications} list={body?.certifications || []} />
-      <SectionSkills icon={KnowledgesIcon} title={knowledges} list={body?.knowledges || []} />
+      {
+        body.works.length > 0 &&
+        <SectionTimeLine icon={WorkIcon} title={work_experience} list={body?.works || []} />
+      }
+      {
+        body.certifications.length > 0 &&
+        <SectionTimeLine icon={StudiesIcon} title={titles_and_certifications} list={body?.certifications || []} />
+      }
+      {
+        body.knowledges.length > 0 &&
+        <SectionSkills icon={KnowledgesIcon} title={knowledges} list={body?.knowledges || []} />
+      }
     </section>
   )
 }

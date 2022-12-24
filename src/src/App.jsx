@@ -17,7 +17,7 @@ function App() {
   const [content, setContent] = useState(JSON.parse(init))
   const [update, setUpdate] = useState(JSON.parse(init))
   const [show, setShow] = useState(false)
-  const [language, setLanguage] = useState(english)
+  const [language, setLanguage] = useState(spanish)
 
   const handleCancelUpdates = () => {
     const contentStr = JSON.stringify(content)

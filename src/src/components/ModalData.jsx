@@ -19,7 +19,7 @@ const ModalData = () => {
   }
 
   return (
-    <Modal show={show} onHide={() => setShow(false)}>
+    <Modal show={show} onHide={() => setShow(false)} backdrop="static" keyboard={false}>
       <Modal.Body className='p-0'>
         <Tabs defaultActiveKey="general" fill>
           <Tab eventKey="general" title="General">

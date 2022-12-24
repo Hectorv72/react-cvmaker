@@ -277,7 +277,7 @@ hr {
 .section--heading-group {
   display: block;
   margin: 0;
-  padding: 0 0 6px 0;
+  padding: 0 0 3px 0;
   page-break-inside: avoid !important;
 }
 

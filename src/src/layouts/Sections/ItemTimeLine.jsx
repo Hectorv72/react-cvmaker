@@ -2,7 +2,7 @@ import React from 'react'
 
 const ItemTimeLine = ({ date, title, subtitle, content }) => {
   return (
-    <li className="section--item">
+    <li className="section--item ">
       <div className="section--time-line">
         <svg className="section--time-line-dot">
           <circle cx="4" cy="4" r="3" stroke="black" strokeWidth="1" fill="white"></circle>
@@ -21,9 +21,9 @@ const ItemTimeLine = ({ date, title, subtitle, content }) => {
       {
         content &&
         <div className="section--content">
-          <p>
+          <div>
             {content}
-          </p>
+          </div>
         </div>
       }
     </li>

@@ -1,9 +1,17 @@
 {
   "languageLabel": "english",
-  "work_experience": "work experience",
-  "titles_and_certifications": "titles and certifications",
-  "knowledges": "knowledges",
+  "work_experience": "Work experience",
+  "titles_and_certifications": "Titles and certifications",
+  "knowledges": "Knowledges",
   "personal_information": "Personal information",
+  "sex": "Sex",
+  "sexs": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "nacionality": "Nacionality",
+  "civilstatus": "Marital status",
+  "house": "Address",
   "from": "From",
   "phone": "Phone"
 }

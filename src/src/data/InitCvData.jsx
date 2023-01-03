@@ -3,10 +3,15 @@ export default {
   sidebar: {
     personal: {
       from: 'Mexico, D.F, Mexico',
+      house: null,
+      sex: 'male',
+      nacionality: null,
+      civilstatus: null,
       email: 'jill.morgan@zety.com',
       phone: '212-555-0104',
+      web: null,
       github: 'www.github.com/Hectorv72',
-      linkedin: 'www.linkedin.com/in/hectorv72'
+      linkedin: 'www.linkedin.com/in/hectorv72',
     },
     others: [
       { title: 'Languages', items: ['English - Expert'] }

@@ -4,6 +4,14 @@
   "titles_and_certifications": "estudios y certificaciones",
   "knowledges": "conocimientos",
   "personal_information": "Información personal",
+  "sex": "Sexo",
+  "sexs": {
+    "male": "Masculino",
+    "female": "Femenino"
+  },
+  "nacionality": "Nacionalidad",
+  "civilstatus": "Estado civil",
+  "house": "Domicilio",
   "from": "Ubicación",
   "phone": "Teléfono"
 }

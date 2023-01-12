@@ -5,9 +5,9 @@ import ContentItems from './tabs/ContentItems'
 import ContentContext from '../../context/ContentContext'
 
 const TabSidebar = () => {
-  const { update, content, setUpdate } = useContext(ContentContext)
+  const { update, setUpdate } = useContext(ContentContext)
 
-  const prevTabs = content.sidebar.others.map(
+  const prevTabs = update.sidebar.others.map(
     ({ title, items }) => ({
       eventKey: title.toLowerCase(), title, component: ContentItems, props: { items }
     })
@@ -17,6 +17,7 @@ const TabSidebar = () => {
     { eventKey: 'personal', title: 'Personal', component: Personal, persistent: true },
     ...prevTabs
   ]
+
 
   const handleUpdateItems = (listTabs) => {
     const newUpdate = { ...update }

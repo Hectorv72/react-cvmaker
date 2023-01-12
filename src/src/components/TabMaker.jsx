@@ -38,17 +38,39 @@ const TabMaker = ({ tabs: initTabs = [], componentMaker, header = true, tabLabel
     }
   }
 
-  const renderTab = ({ title, eventKey, component: Component, props, persistent }, index) => {
+  const handleChangePosition = (direction, index, tab) => {
+    const newTabs = [...tabs]
+    const newPos = direction === 'left' ? index - 1 : index + 1
+    newTabs.splice(index, 1);
+    newTabs.splice(newPos, 0, tab);
+    setTabs(newTabs);
+  }
+
+  const renderTab = (tab, index) => {
+    const { title, eventKey, component: Component, props, persistent } = tab
     const labelTitle = title.length > 15 ? title.substr(0, 14) + '...' : title
     return (
       <Tab key={'maked-tab-' + index} eventKey={eventKey} title={labelTitle || `${tabLabel}-${index + 1}`}>
         <div className='my-2'>
           {
+            !persistent &&
+            <div className='d-flex flex-row justify-content-center my-2'>
+              {
+                (tabs[index - 1] !== undefined && !tabs[index - 1]?.persistent) &&
+                <Button variant='outline-primary' onClick={() => handleChangePosition('left', index, tab)} >{'<'}</Button>
+              }
+              {
+                (tabs[index + 1] !== undefined && !tabs[index + 1]?.persistent) &&
+                <Button variant='outline-primary' onClick={() => handleChangePosition('right', index, tab)} >{'>'}</Button>
+              }
+            </div>
+          }
+          {
             header && !persistent && <Form.Control value={title || ''} name={`newtab-${index}`} placeholder="Title" onChange={handleChangeTitle} />
           }
           <Component {...props} index={index} />
           {
-            !persistent && <Button variant='outline-danger' className='text-center w-100' onClick={() => handleDeleteTab(index)}>Remove</Button>
+            !persistent && <Button className='text-center w-100' onClick={() => handleDeleteTab(index)}>Remove</Button>
           }
         </div>
       </Tab>

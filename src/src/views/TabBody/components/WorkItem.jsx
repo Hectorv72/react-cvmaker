@@ -27,7 +27,7 @@ const WorkItem = ({ date, title, subtitle, content, index }) => {
   return (
     <Row className='mb-3 g-2'>
       <Col xs={6}>
-        <FormLabel>Start{index}</FormLabel>
+        <FormLabel>Start</FormLabel>
         <Form.Control placeholder='Mar 2010' name='start' value={form?.start || ''} onChange={handleUpdateForm} />
       </Col>
       <Col xs={6}>

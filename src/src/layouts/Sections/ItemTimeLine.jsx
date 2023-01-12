@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ItemTimeLine = ({ date, title, subtitle, content }) => {
+  console.log(content)
   return (
     <li className="section--item ">
       <div className="section--time-line">
@@ -21,7 +22,7 @@ const ItemTimeLine = ({ date, title, subtitle, content }) => {
       {
         content &&
         <div className="section--content">
-          <div>
+          <div style={{ whiteSpace: 'pre-line' }}>
             {content}
           </div>
         </div>

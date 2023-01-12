@@ -17,6 +17,9 @@ const Sidebar = () => {
       <ModalGuide setShow={setShowGuide} show={showGuide} />
       <div className="sidebar--bg"></div>
       <aside className="sidebar">
+        {/* <div>
+          <img style={{ marginLeft: 15 }} src="src/src/images/profile.png" width={150} />
+        </div> */}
         <div className='me-3 pt-4 d-print-none'>
           <label className='my-2 w-100 h6 d-flex justify-content-between align-items-center'>
             <div>Print: Ctrl + P</div>

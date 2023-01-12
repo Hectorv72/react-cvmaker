@@ -7,12 +7,17 @@ const SectionSummary = ({ title, subtitle, description }) => {
         <div className="section--content">
           <h2>{title}</h2>
           <br />
-          <p>
-            <span style={{ color: 'rgba(0, 0, 0, 0.9)', marginBottom: '10px' }}>
-              {subtitle}
-            </span>
-          </p>
-          <br />
+          {
+            subtitle !== '' &&
+            <>
+              <p>
+                <span style={{ color: 'rgba(0, 0, 0, 0.9)', marginBottom: '10px' }}>
+                  {subtitle}
+                </span>
+              </p>
+              <br />
+            </>
+          }
           <p>
             <span style={{ color: 'rgba(0, 0, 0, 0.9)' }}>
               {description}
